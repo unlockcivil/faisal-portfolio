@@ -188,14 +188,10 @@ function App() {
             <div className="hero-left">
               <span className="kicker">Full Stack Cloud Engineer</span>
               <p className="hero-name">{profile.name}</p>
-              <h1 className="hero-headline">
-                Building Systems
-                <br />
-                <span className="text-gradient">That Scale</span>
-              </h1>
+              <p className="hero-experience text-gradient">3+ Years of Experience</p>
               <p className="hero-copy">
-                Backend engineer specializing in cloud infrastructure, microservices, and production reliability. 3+ years
-                crafting payment platforms, DevOps automation, and scalable architectures.
+                Full stack engineer specializing in cloud infrastructure, scalable applications, and production
+                reliability across backend systems and modern frontend experiences.
               </p>
               <div className="hero-cta">
                 <a href="#contact" className="primary-cta">
@@ -207,21 +203,16 @@ function App() {
               </div>
             </div>
             <div className="hero-right">
-              <div className="stats-card">
-                <div className="stat-item">
-                  <div className="stat-value">3+</div>
-                  <div className="stat-label">Years Experience</div>
-                </div>
-                <div className="stat-divider" />
-                <div className="stat-item">
-                  <div className="stat-value">450+</div>
-                  <div className="stat-label">Vulnerabilities Fixed</div>
-                </div>
-                <div className="stat-divider" />
-                <div className="stat-item">
-                  <div className="stat-value">5+</div>
-                  <div className="stat-label">Systems Modernized</div>
-                </div>
+              <div className="resume-card">
+                <p className="resume-card-label">Resume</p>
+                <h2>Download My Latest Resume</h2>
+                <p className="resume-card-copy">
+                  Get a detailed overview of my experience in full stack engineering, cloud systems, and scalable
+                  product development.
+                </p>
+                <a href="/Faisal-Inayath-SWE.pdf" download className="primary-cta">
+                  Download Resume
+                </a>
               </div>
             </div>
           </div>
@@ -444,12 +435,18 @@ function App() {
           justify-content: space-between;
           align-items: center;
           padding: 1.5rem 5%;
-          position: sticky;
+          position: fixed;
           top: 0;
+          left: 0;
+          width: 100%;
           z-index: 100;
           background: rgba(10, 14, 26, 0.8);
           backdrop-filter: blur(12px);
           border-bottom: 1px solid var(--border);
+        }
+
+        main {
+          padding-top: 5.75rem;
         }
 
         .brand-mark {
@@ -586,10 +583,20 @@ function App() {
           letter-spacing: -0.03em;
         }
 
+        .hero-experience {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(2rem, 5vw, 3.4rem);
+          line-height: 1;
+          font-weight: 700;
+          color: var(--text);
+          margin-bottom: 0.9rem;
+          letter-spacing: -0.02em;
+        }
+
         .hero-headline {
           font-family: 'Syne', sans-serif;
-          font-size: clamp(1.6rem, 3.6vw, 2.6rem);
-          line-height: 1.15;
+          font-size: clamp(1.2rem, 2.8vw, 2rem);
+          line-height: 1.2;
           margin-bottom: 1.5rem;
           font-weight: 700;
           letter-spacing: -0.01em;
@@ -648,39 +655,37 @@ function App() {
           align-items: center;
         }
 
-        .stats-card {
+        .resume-card {
           background: var(--bg-card);
           border: 1px solid var(--border);
           border-radius: 16px;
           padding: 2.5rem;
           backdrop-filter: blur(10px);
           display: grid;
-          gap: 1.5rem;
+          gap: 1rem;
+          max-width: 360px;
         }
 
-        .stat-item {
-          display: grid;
-          gap: 0.5rem;
-        }
-
-        .stat-value {
-          font-family: 'Syne', sans-serif;
-          font-size: 2.2rem;
-          font-weight: 800;
+        .resume-card-label {
           color: var(--accent-light);
-        }
-
-        .stat-label {
-          font-size: 0.85rem;
-          color: var(--text-muted);
+          font-size: 0.8rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
-          letter-spacing: 0.05em;
-          font-weight: 600;
         }
 
-        .stat-divider {
-          height: 1px;
-          background: var(--border);
+        .resume-card h2 {
+          font-family: 'Syne', sans-serif;
+          font-size: 1.9rem;
+          font-weight: 800;
+          line-height: 1.15;
+        }
+
+        .resume-card-copy {
+          font-size: 0.95rem;
+          color: var(--text-muted);
+          line-height: 1.7;
+          margin-bottom: 0.5rem;
         }
 
         /* SECTIONS */
@@ -1111,8 +1116,12 @@ function App() {
             font-size: 2.7rem;
           }
 
+          .hero-experience {
+            font-size: 1.9rem;
+          }
+
           .hero-headline {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
           }
 
           .hero-copy {
