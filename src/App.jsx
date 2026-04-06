@@ -7,6 +7,7 @@ const profile = {
   phone: '+91 90081 97150',
   email: 'faisalinayath16@gmail.com',
   linkedin: 'https://www.linkedin.com/in/faisal-i-b8a351201/',
+  github: 'https://github.com/unlockcivil',
 }
 
 const skillCards = [
@@ -209,7 +210,7 @@ function App() {
                   Get a detailed overview of my experience in full stack engineering, cloud systems, and scalable
                   product development.
                 </p>
-                <a href="/Faisal-Inayath-SWE.pdf" download className="primary-cta">
+                <a href="/FAISAL-INAYATH-SDE.pdf" download className="primary-cta">
                   Download Resume
                 </a>
               </div>
