@@ -8,6 +8,7 @@ const profile = {
   email: 'faisalinayath16@gmail.com',
   linkedin: 'https://www.linkedin.com/in/faisal-i-b8a351201/',
   github: 'https://github.com/unlockcivil',
+  leetcode: 'https://leetcode.com/u/finayath/',
 }
 
 const skillCards = [
@@ -376,6 +377,11 @@ function App() {
                 <a href={profile.linkedin} target="_blank" rel="noreferrer" className="contact-card">
                   <span className="contact-label">LinkedIn</span>
                   <span className="contact-value">linkedin.com/in/faisal-i-b8a351201</span>
+                </a>
+
+                <a href={profile.leetcode} target="_blank" rel="noreferrer" className="contact-card">
+                  <span className="contact-label">LeetCode</span>
+                  <span className="contact-value">leetcode.com/u/finayath</span>
                 </a>
               </div>
 
