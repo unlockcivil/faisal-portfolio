@@ -20,6 +20,10 @@ const skillCards = [
     items: ['Microsoft Azure', 'Azure Functions', 'AKS', 'Docker', 'Kubernetes', 'Helm', 'Terraform', 'CI/CD', 'DNS'],
   },
   {
+    title: 'Networking',
+    items: ['VNet', 'Subnet', 'Private Endpoints'],
+  },
+  {
     title: 'Databases & Tools',
     items: ['PostgreSQL', 'Redis', 'Veracode', 'Splunk', 'OpenTelemetry', 'Prisma Cloud'],
   },
@@ -45,6 +49,7 @@ const experiences = [
       'Optimized high-volume payment APIs to sub-200ms latency using Django ORM, Redis caching, and database indexing',
       'Built Azure Functions for payment processing with retries, idempotency, and dead-letter handling for 99.9% reliability',
       'Drove Kubernetes migration, Helm-based release management, and GitOps workflows',
+      'Improved application security by configuring Azure VNet, subnets, and private endpoints for PostgreSQL, enabling secure internal communication and network isolation',
       'Resolved 450+ SAST and DAST vulnerabilities and supported PCI-DSS Level 1 compliance',
       'Automated infrastructure provisioning with Terraform, reducing deployment time by 70%',
       'Conducted Azure Learn & Share technical sessions on containers, container orchestration, and Azure Storage Accounts to enable knowledge sharing across teams',
@@ -71,6 +76,18 @@ const projects = [
     period: '2025 - Present',
     type: 'B2B SaaS marketplace',
     url: 'https://unlockcivil.com',
+    technologies: [
+      'Azure App Service',
+      'Azure Static Web Apps',
+      'Azure Communication Services',
+      'Azure Blob Storage',
+      'Azure Functions',
+      'React',
+      'React-Bootstrap',
+      'Django REST Framework',
+      'Azure Maps',
+      'Azure SQL',
+    ],
     summary: 'A lead marketplace platform built for scale, monetization, and operational efficiency',
     points: [
       'Launched a production product supporting 1000+ concurrent users',
@@ -82,9 +99,10 @@ const projects = [
   },
   {
     name: 'Billing Software',
-    period: '2024',
+    period: '2026',
     type: 'Full-stack billing and record management platform',
     url: 'https://brave-moss-08a2ce100.1.azurestaticapps.net/dashboard',
+    technologies: ['Django REST Framework', 'React-Bootstrap', 'Azure App Service', 'Azure Static Web Apps', 'Azure SQL'],
     summary:
       'A billing solution built to streamline purchase and sales workflows, automate calculations, and preserve historical records for faster future operations.',
     points: [
@@ -98,9 +116,10 @@ const projects = [
   },
   {
     name: 'Gao Kings Properties',
-    period: '2024',
+    period: '2025',
     type: 'Frontend-only real estate website',
     url: 'https://www.gaokingsproperties.com',
+    technologies: ['React', 'React-Bootstrap', 'Responsive Design', 'Frontend Development', 'Hostinger'],
     summary:
       'A responsive property website focused on clean browsing flows, strong brand presentation, and smooth content-driven user experience.',
     points: [
@@ -316,6 +335,17 @@ function App() {
                       <li key={j}>{point}</li>
                     ))}
                   </ul>
+
+                  <div className="project-tech">
+                    <span className="tech-label">Tech:</span>
+                    <div className="pill-cloud">
+                      {project.technologies.map((tech) => (
+                        <span key={tech} className="tech-pill">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
                   <p className="project-period">{project.period}</p>
                 </ScrollReveal>
@@ -943,6 +973,12 @@ function App() {
           left: 0;
           color: var(--accent);
           font-weight: 700;
+        }
+
+        .project-tech {
+          display: grid;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
         }
 
         .project-period {
